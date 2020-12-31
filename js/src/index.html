@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <style>
+      body {
+        background-color: #eef;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 0px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+      }
+      /*Chrome*/
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+          input[type='range'] {
+            overflow: hidden;
+            width: 80px;
+            -webkit-appearance: none;
+            background-color: #9a905d;
+          }
+          
+          input[type='range']::-webkit-slider-runnable-track {
+            height: 10px;
+            -webkit-appearance: none;
+            color: #13bba4;
+            margin-top: -1px;
+          }
+          
+          input[type='range']::-webkit-slider-thumb {
+            width: 10px;
+            -webkit-appearance: none;
+            height: 10px;
+            cursor: ew-resize;
+            background: #434343;
+            box-shadow: -80px 0 0 80px #43e5f7;
+          }
+
+      }
+      /** FF*/
+      input[type="range"]::-moz-range-progress {
+        background-color: #43e5f7; 
+      }
+      input[type="range"]::-moz-range-track {  
+        background-color: #9a905d;
+      }
+      /* IE*/
+      input[type="range"]::-ms-fill-lower {
+        background-color: #43e5f7; 
+      }
+      input[type="range"]::-ms-fill-upper {  
+        background-color: #9a905d;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <canvas id="game-of-life-canvas"></canvas>
+    <script src="./bootstrap.js"></script>
+    <div>
+      <button id="play-pause"></button>
+      <button id="next-frame"></button>
+      <span>Maximum FPS: <input type="range" id="fps-range"></button></span>
+    </div>
+    <pre id="fps"></pre>
+  </body>
+</html>

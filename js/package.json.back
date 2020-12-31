@@ -1,0 +1,27 @@
+{
+  "name": "wasm-app-front",
+  "version": "0.1.0",
+  "description": "Game of life implementation in webassembly",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "webpack"
+  ],
+  "dependencies": {
+    "wasm-game-of-life": "file:../rs/pkg"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
+    "eslint": "^7.16.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
